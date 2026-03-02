@@ -3,7 +3,7 @@ class Solution {
         int n = nums.length;
         int sum = 0, maxSum = Integer.MIN_VALUE;
         for(int i = 0;i < n;i ++){
-            sum += nums[i];
+            sum += nums[i];                  // Kadane's Algorithm - optimal
             if(sum > maxSum){
                 maxSum = sum;
             }
