@@ -20,3 +20,10 @@ class Solution {
         return -1;
     }
 }
+
+// Another Logic Of Majority Element
+Arrays.sort(nums);
+
+int n = nums.length/2;
+
+return nums[n];
