@@ -13,14 +13,18 @@ class Solution {
                 arr[i][right] =num++;
             }
             right--;
-            for(int i = right;i >= left;i --){
+            if(top <= bottom){
+                for(int i = right;i >= left;i --){
                 arr[bottom][i] = num++;
+                }
+                bottom--;
             }
-            bottom--;
-            for(int i = bottom; i >= top;i --){
+            if(left <= right){
+                for(int i = bottom; i >= top;i --){
                 arr[i][left] = num++;
+                }
+                left++;
             }
-            left++;
         }
         return arr;
     }
