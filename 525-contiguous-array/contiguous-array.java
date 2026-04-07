@@ -1,4 +1,3 @@
-// Optimal
 class Solution {
     public int findMaxLength(int[] nums) {
         int n = nums.length;
@@ -15,27 +14,21 @@ class Solution {
             }
         }
         return maxLen;
-    }
-}
-
-// Brute-Force
-class Solution {
-    public int findMaxLength(int[] nums) {
-        for(int i = 0;i < n;i ++){
-            if(nums[i] == 0){
-                nums[i] = -1;
-            }
-        }
-        int length = 0;
-        for(int i = 0;i < n;i ++){
-            int sum = 0;
-            for(int j = i;j < n;j ++){
-                sum += nums[j];
-                if(sum == 0){
-                    length = Math.max(length, j - i + 1);
-                }
-            }
-        }
-        return length;
+        // for(int i = 0;i < n;i ++){
+        //     if(nums[i] == 0){
+        //         nums[i] = -1;
+        //     }
+        // }
+        // int length = 0;
+        // for(int i = 0;i < n;i ++){
+        //     int sum = 0;
+        //     for(int j = i;j < n;j ++){
+        //         sum += nums[j];
+        //         if(sum == 0){
+        //             length = Math.max(length, j - i + 1);
+        //         }
+        //     }
+        // }
+        // return length;
     }
 }
